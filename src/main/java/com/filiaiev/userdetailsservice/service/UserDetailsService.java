@@ -21,4 +21,11 @@ public class UserDetailsService {
 
         return userDetailsMapper.mapUserDetailsDOToUserDetails(userDetailsDO);
     }
+
+    public void createUserDetails(UserDetails createUserDetails) {
+        UserDetailsDO createUserDetailsDO =
+                userDetailsMapper.mapUserDetailsToUserDetailsDO(createUserDetails);
+
+        userDetailsRepository.save(createUserDetailsDO);
+    }
 }

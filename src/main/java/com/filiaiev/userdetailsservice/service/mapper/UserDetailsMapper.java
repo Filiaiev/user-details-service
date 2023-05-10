@@ -11,10 +11,7 @@ import java.time.ZoneOffset;
 @Mapper(componentModel = "spring")
 public interface UserDetailsMapper {
 
-
     UserDetails mapUserDetailsDOToUserDetails(UserDetailsDO userDetailsDO);
 
-    default OffsetDateTime mapInstantToOffsetDateTime(Instant instant) {
-        return OffsetDateTime.ofInstant(instant, ZoneOffset.UTC);
-    }
+    UserDetailsDO mapUserDetailsToUserDetailsDO(UserDetails userDetails);
 }

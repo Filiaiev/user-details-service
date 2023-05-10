@@ -3,13 +3,13 @@ package com.filiaiev.userdetailsservice.model;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 @Data
 public class UserDetails {
 
-    @Id
     private Long id;
     private String email;
     private String firstName;
@@ -23,5 +23,5 @@ public class UserDetails {
     private String addressLine1;
     private String addressLine2;
     private String postcode;
-    private OffsetDateTime createdAt;
+    private Instant createdAt;
 }

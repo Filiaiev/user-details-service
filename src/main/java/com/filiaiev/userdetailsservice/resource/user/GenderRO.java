@@ -19,11 +19,11 @@ public enum GenderRO {
     @JsonValue
     public final String value;
 
-    private static final Map<String, GenderDO> gendersMap = Stream.of(GenderDO.values())
+    private static final Map<String, GenderRO> gendersMap = Stream.of(GenderRO.values())
             .collect(Collectors.toMap(role -> role.value, Function.identity()));
 
     @JsonCreator
-    public static GenderDO forValue(String id) {
+    public static GenderRO forValue(String id) {
         return gendersMap.get(id);
     }
 }
